@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/loginLogo"
+        android:layout_width="169dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/panel"
+        android:layout_width="375dp"
+        android:layout_height="431dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginLogo"
+        app:layout_constraintVertical_bias="0.157">
+
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="368dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="10dp"
+            android:text="Email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginMailKontener"
+            android:layout_width="374dp"
+            android:layout_height="43dp"
+            app:boxStrokeColor="@drawable/kontener_background"
+            app:boxStrokeWidth="2dp"
+            app:errorEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_email"
+            app:startIconContentDescription="email"
+            app:startIconDrawable="@drawable/baseline_email_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/text_password"
+            android:layout_width="378dp"
+            android:layout_height="27dp"
+            android:text="Password"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginMailKontener" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginPasswordKontener"
+            android:layout_width="374dp"
+            android:layout_height="58dp"
+            android:visibility="visible"
+            app:boxStrokeColor="@drawable/kontener_background"
+            app:boxStrokeWidth="2dp"
+            app:errorEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_password"
+            app:startIconContentDescription="Password"
+            app:startIconDrawable="@drawable/baseline_lock_open_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/text_rewerse_password"
+            android:layout_width="377dp"
+            android:layout_height="21dp"
+            android:text="RewersePassword"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginPasswordKontener" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginRewersePasswordKontener"
+            android:layout_width="373dp"
+            android:layout_height="54dp"
+            android:visibility="visible"
+            app:boxStrokeColor="@drawable/kontener_background"
+            app:boxStrokeWidth="2dp"
+            app:errorEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_rewerse_password"
+            app:startIconContentDescription="password"
+            app:startIconDrawable="@drawable/baseline_lock_open_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginRewersePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox_robot"
+            android:layout_width="158dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:text="Nie jestem robotem"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginRewersePasswordKontener" />
+
+        <CheckBox
+            android:id="@+id/checkBox_statute"
+            android:layout_width="162dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:text="Akceptuje regulamin"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox_robot" />
+
+        <Button
+            android:id="@+id/buttonRegistr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:text="Zarejestruj sie"
+            android:textColor="?attr/colorPrimaryVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.825"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
